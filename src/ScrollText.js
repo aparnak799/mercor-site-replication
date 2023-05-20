@@ -3,10 +3,10 @@ import {
   motion,
   useScroll,
   useTransform,
-  useMotionTemplate
+  useMotionTemplate,
 } from "framer-motion";
 import "./index.css";
-import "./fonts/LabilGrotesk-Medium.ttf"
+import "./fonts/LabilGrotesk-Medium.ttf";
 
 const ContentLine = ({ content }) => {
   const contentRef = useRef();

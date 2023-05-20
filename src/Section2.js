@@ -4,15 +4,7 @@ const Section2 = () => {
   return (
     <div class="flex-container">
       <div class="flex-item">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "15px",
-            textAlign: "left",
-            justifyContent: "normal",
-          }}
-        >
+        <div className="section-2--span">
           <svg
             width="18"
             height="18"
@@ -26,19 +18,10 @@ const Section2 = () => {
               fill="#A594FD"
             ></path>
           </svg>
-          <span style={{ color: "#A594FD", fontSize: "1.5rem" }}>Workflow</span>
+          <span className="section-2--h2">Workflow</span>
         </div>
-        <h2 style={{ width: "70%", color: "white", textAlign: "left" }}>
-          Create at the speed of thought.
-        </h2>
-        <p
-          style={{
-            textAlign: "left",
-            fontSize: "1.1rem",
-            color: "#ADADAD",
-            width: "70%",
-          }}
-        >
+        <h2 className="section-2--h2-body">Create at the speed of thought.</h2>
+        <p className="section-2--p">
           Focus on your getting your thoughts out and crafting the best message
           while Chronicle does the heavy lifting for you
         </p>

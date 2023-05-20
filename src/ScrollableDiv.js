@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import ImageAnimation from "./ImageAnimation";
 
 const ScrollableDiv = () => {
   const scrollableRef = useRef(null);
@@ -36,29 +37,7 @@ const ScrollableDiv = () => {
   return (
     <div className="scrollable-div" ref={scrollableRef}>
       <motion.div id="scroll-content" ref={contentRef}>
-        {/* Add your content here */}
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <p>
-          Nullam ut semper tortor. In fermentum bibendum ex, vitae efficitur
-          arcu pellentesque vitae.
-        </p>
-        <p>
-          Etiam sagittis, dolor eget mollis malesuada, elit enim dictum tellus,
-          ut ultricies risus dolor non lacus.
-        </p>
-        <p>Proin at metus tellus. Sed ut varius purus.</p>
-        <p>Morbi non velit risus.</p>
-        <p>
-          Curabitur gravida arcu eget metus lacinia, at consectetur tortor
-          tincidunt.
-        </p>
-        <p>Nunc nec enim feugiat, ultrices lorem at, semper ipsum.</p>
-        <p>Suspendisse congue ipsum vitae nisi fringilla vulputate.</p>
-        <p>Quisque et ex vel diam tincidunt tristique id sed velit.</p>
-        <p>
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames ac turpis egestas.
-        </p>
+        <ImageAnimation />
       </motion.div>
       <motion.div
         className="scrollbar-thumb"

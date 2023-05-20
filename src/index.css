@@ -95,7 +95,7 @@ section {
 }
 
 .scrollable-div {
-  height: 200px; /* Set the fixed height */
+  height: 650px; /* Set the fixed height */
   overflow-y: auto; /* Enable vertical scrolling */
   padding-right: 17px;
 }
@@ -114,4 +114,38 @@ section {
   top: 0;
   background-color: #888; /* Change the background color */
   border-radius: 4px;
+}
+
+.images {
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+.section-2--span {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-align: left;
+  justify-content: normal;
+}
+
+.section-2--h2 {
+  color: #a594fd;
+  font-size: 1.5rem;
+}
+
+.section-2--h2-body {
+  width: 70%;
+  color: white;
+  text-align: left;
+}
+
+.section-2--p {
+  text-align: left;
+  font-size: 1.1rem;
+  color: #adadad;
+  width: 70%;
 }
