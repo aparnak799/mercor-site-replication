@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { ScrollText } from "./ScrollText";
+import Header from "./components/Header";
+import Section2 from "./Section2";
+
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+const content = [
+  "In Chronicle everything is made",
+  "with Blocks that come with pixel",
+  "perfect design, interactivity and",
+  " motion out of the box. Instead of",
+  "designing from scratch, simply",
+  " choose the right one from our",
+  "library of blocks and see the",
+  "magic unfold.",
+];
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  return root.render(
+    <StrictMode>
+      <Header/>
+      <section style={{color: 'white', marginLeft: '-15%', marginTop: '-12%'}}>Scroll Down for Section 1</section>
+      <ScrollText content={content} />
+      <Section2 />
+    </StrictMode>
   );
 }
 

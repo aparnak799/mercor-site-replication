@@ -1,13 +1,117 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* START DEMO ONLY STYLES */
+body {
+  font-family: "Medium";
+  -webkit-font-smoothing: antialiased;
+  background: #000;
+  color: #202020;
+  font-size: 3.7rem;
+  text-align: center;
+  padding-left: 13%;
+  margin: 0;
+  line-height: 1;
+  overflow-y: scroll;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* END DEMO ONLY STYLES */
+
+.outer {
+  background: black;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(50%);
+  padding: 100px 0;
+  text-align: left;
+}
+
+.inner p {
+  display: inline;
+  line-height: 1.1;
+}
+
+.text-container {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.highlighted-text:before {
+  content: attr(data-text);
+  display: inline-block;
+  opacity: 1;
+}
+
+.highlighted-text {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  transition: clip-path 0.1s ease;
+  text-shadow: 0 0 0 #fff;
+}
+
+@font-face {
+  font-family: "Medium"; /*Can be any text*/
+  src: local("LabilGrotesk-Medium"),
+    url("./fonts/LabilGrotesk-Medium.ttf") format("truetype");
+}
+
+/* Media Query for screen width 860px or less */
+@media (max-width: 860px) {
+  body {
+    font-size: 2.5rem; /* Adjust the font size as per your requirement */
+  }
+}
+.flex-container {
+  display: flex; /* use Flexbox */
+  justify-content: center; /* center items horizontally */
+  align-items: center; /* center items vertically */
+  height: 100vh; /* take up full viewport height */
+}
+
+.flex-item {
+  flex: 1; /* take up equal amount of space */
+  margin: 1em; /* add some margin around items */
+  text-align: center; /* center text within items */
+  border: 1px solid black; /* border for demonstration */
+}
+
+@media (max-width: 600px) {
+  .flex-container {
+    flex-direction: column; /* stack items vertically */
+  }
+}
+
+.scrollable-div {
+  height: 200px; /* Set the fixed height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 17px;
+}
+/* /* Hide the scrollbark */
+.scrollable-div::-webkit-scrollbar {
+  width: 0.5em;
+}
+.scrollable-div::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+}
+.scrollbar-thumb {
+  width: 8px;
+  height: 50px;
+  position: absolute;
+  right: 2px;
+  top: 0;
+  background-color: #888; /* Change the background color */
+  border-radius: 4px;
 }
